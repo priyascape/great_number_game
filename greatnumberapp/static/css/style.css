@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    border-radius: 20px;
+    background-color: cornflowerblue;
+    padding:3rem;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+h1 {
+    font-family:'Chango', cursive;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%
+
+}
+
+label{
+    font-family:'Lato', sans-serif ;
+    display: block;
+    margin-bottom: 2rem;
+    font-weight:bold;
+    font-size: 1.5rem;
+}
+
+#guess {
+    width:300px;
+    height:50px;
+    font-size: 1.5rem;
+    text-align:center;
+}
+
+.button {
+    margin-top: 1.5rem;
+    padding: .75rem 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: black;
+
+}
+.green{
+    background-color:chartreuse;
+}
+.red {
+    background-color: red;
+}
+
+.low,
+.high,
+.win {
+    font-family: 'Lato',sans-serif;
+    border-radius: 20px;
+    padding:3rem;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.low,
+.high{
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    
+    <title>The Great Number game</title>
+</head>
+<body>
+    <h1>The Great Number Game</h1>
+    {% if request.session.too_low %}
+    <div class="low">
+        <h2>TOO LOW</h2>
+    </div>
+    {% endif %}
+
+    {% if request.session.too_high %}
+    <div class="high">
+        <h2>TOO HIGH</h2>
+    </div>
+    {% endif %}
+
+    {% if request.session.just_right %}
+    <div class="win">
+        <h2>JUST RIGHT</h2>
+    </div>
+    {% endif %}
+    
+   <div class ="container">
+       <form action="/guess" method="post">
+        {% csrf_token %}
+        <label for="guess">GUESS A NUMBER</label>
+        <input type="number" name="guess" id="guess">
+        <input type="submit" value="GUESS" class="button green">
+    <a href="/reset" class ="button red"> RESET</a> 
+</form>
+
+</div>
+
+</body>
+</html>
